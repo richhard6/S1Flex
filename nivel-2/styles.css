@@ -208,11 +208,9 @@ article p {
   padding: 1rem;
   border-radius: 7px;
 }
-.articles-aside div {
-  position: relative;
-}
 
 .articles-aside div {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -247,8 +245,6 @@ article p {
 }
 
 .articles-aside article img:hover {
-  max-width: 100%;
-  max-height: 50%;
   filter: saturate(1);
 }
 
@@ -315,6 +311,7 @@ article p {
 @media only screen and (max-device-width: 480px) {
   header {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
   }
 
@@ -322,16 +319,17 @@ article p {
     background-position: bottom;
   }
 
-  header .logo {
+  .logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
   }
-  header .navigation-bar {
-    flex-direction: column;
+
+  .logo img {
+    width: 3.5rem;
   }
 
   header .social-networks {
+    flex-direction: row;
   }
 
   .hero {
