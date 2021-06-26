@@ -1,0 +1,354 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'headerhero headerhero headerhero headerhero'
+    'main main main sidebar'
+    'footer footer footer footer';
+  gap: 1rem;
+}
+
+.headerhero-grid_container {
+  min-height: 40vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.571),
+      rgba(255, 0, 0, 0)
+    ),
+    url(./assets/cabecera.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  grid-area: headerhero;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'header header header header'
+    'hero hero hero hero';
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 'logo nav nav social';
+}
+
+.logo {
+  grid-area: logo;
+  margin: auto;
+}
+
+.logo img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.navigation-bar {
+  margin: auto;
+  grid-area: nav;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  display: inline-flex;
+  color: inherit;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+.navigation-bar a img {
+  margin-right: 0.5rem;
+}
+
+.navigation-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.322);
+  transform: scale(1.1);
+}
+
+.social-networks {
+  grid-area: social;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-networks a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+.social-networks a:hover {
+  background-color: rgba(255, 255, 255, 0.322);
+  transform: scale(1.1);
+}
+
+.hero {
+  grid-area: hero;
+  margin: auto;
+}
+
+.hero h1 {
+  text-align: center;
+  opacity: 50%;
+  color: white;
+}
+
+main {
+  grid-area: main;
+}
+
+article p {
+  font-weight: 200;
+  line-height: 1.5rem;
+}
+
+.articles-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto;
+  grid-template-areas:
+    'first first second second'
+    'third third fourth fourth'
+    'fifth fifth fifth fifth';
+  gap: 0.5rem;
+}
+
+.articles-section article {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 7px;
+  padding: 1%;
+}
+
+.articles-section article:nth-child(1) {
+  grid-area: first;
+}
+
+.articles-section article div {
+}
+
+.articles-section article img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -5px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.articles-section article span {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.articles-section article div {
+  position: relative;
+}
+
+.articles-section article time {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  color: white;
+
+  font-weight: 200;
+}
+
+.articles-section article h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 0px 0px 7px 7px;
+}
+
+.tradition {
+  background-color: #f94a2789;
+}
+
+.temples {
+  background-color: #cee3bc7c;
+}
+
+.nightlife {
+  background-color: #c1609482;
+}
+
+.gastronomy {
+  background-color: #7fa0a57b;
+}
+
+.nature {
+  background-color: #b6e30085;
+}
+
+.articles-section article:nth-child(2) {
+  grid-area: second;
+}
+.articles-section article:nth-child(3) {
+  grid-area: third;
+}
+.articles-section article:nth-child(4) {
+  grid-area: fourth;
+}
+.articles-section article:nth-child(5) {
+  grid-area: fifth;
+}
+.articles-aside {
+  grid-area: sidebar;
+}
+
+.articles-aside article {
+  margin-top: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1rem;
+  border-radius: 7px;
+}
+
+.articles-aside div {
+  position: relative;
+}
+
+.articles-aside div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles-aside div p {
+  margin-top: 1rem;
+}
+
+.articles-aside div h2 {
+  font-weight: 400;
+}
+
+.articles-aside div p:nth-child(2) {
+  font-size: 2rem;
+}
+.articles-aside div p:nth-child(3) {
+  font-size: 3rem;
+}
+.articles-aside div p:nth-child(4) {
+  font-size: 4rem;
+}
+
+.articles-aside article img {
+  border-radius: 7px 7px 0px 0px;
+
+  max-width: 100%;
+  max-height: 50%;
+  filter: saturate(0);
+  transition: filter 0.5s ease-in-out;
+}
+
+.articles-aside article img:hover {
+  filter: saturate(1);
+}
+
+.articles-aside article h2 {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-weight: 300;
+  padding: 0.2rem;
+}
+
+.articles-aside article button {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.articles-aside article button:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  grid-area: footer;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+
+  font-weight: 200;
+  background-color: #c9c9c96f;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-areas:
+      'headerhero headerhero headerhero headerhero'
+      'main main main main'
+      'sidebar sidebar sidebar sidebar'
+      'footer footer footer footer';
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .articles-section {
+    grid-template-areas:
+      'first first first first'
+      'second second second second'
+      'third third third third'
+      'fourth fourth fourth fourth'
+      'fifth fifth fifth fifth';
+  }
+
+  .headerhero-grid_container {
+  }
+
+  header {
+    grid-template-areas:
+      'logo logo logo logo'
+      'nav nav nav nav'
+      'social social social social';
+  }
+
+  .social-networks {
+    flex-direction: row;
+  }
+
+  .hero,
+  .hero h1 {
+    margin: 0px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
