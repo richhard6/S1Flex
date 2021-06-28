@@ -133,6 +133,10 @@ article p {
   gap: 0.5rem;
 }
 
+.prueba {
+  height: 100%;
+}
+
 .articles-section article {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -144,12 +148,8 @@ article p {
   grid-area: first;
 }
 
-.articles-section article div {
-}
-
 .articles-section article img {
   width: 100%;
-  height: 100%;
   margin-bottom: -5px;
   border-radius: 7px 7px 0px 0px;
 }
@@ -161,6 +161,7 @@ article p {
 
 .articles-section article div {
   position: relative;
+  width: auto;
 }
 
 .articles-section article time {
